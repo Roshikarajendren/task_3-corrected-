@@ -1,0 +1,261 @@
+/* RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+body {
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* HEADER / NAVBAR */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar a {
+    margin: 0 15px;
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+.contact {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.contact:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* HOME SECTION */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 120px 10% 50px;
+}
+
+.home-content h3 {
+    font-size: 28px;
+    color: #333;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.btn-box {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 20px;
+}
+
+.btn-1,
+.btn-2 {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.btn-1 {
+    background: #000;
+    color: #fff;
+}
+
+.btn-1:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn-2 {
+    background: #fff;
+    color: #000;
+}
+
+.btn-2:hover {
+    background: #000;
+    color: #fff;
+}
+
+.image-box img {
+    width: 420px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 80px 10%;
+    background: #f8f8f8;
+}
+
+.about-img img {
+    width: 300px;
+    border-radius: 10px;
+    display: block;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.about-content h3 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* CONTACT FORM */
+.contact-form h2 {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 32px;
+    color: #000;
+}
+
+.contact-form form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.contact-form .input-box input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f1f1f1;
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #000;
+    background: #fff;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 30px 10%;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #f36;
+}
+
+footer .list {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .home, .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-box img,
+    .about-img img {
+        width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-content h1 { font-size: 36px; }
+    .home-content h3 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+    .header { padding: 15px 5%; }
+    .navbar a { margin: 0 8px; font-size: 14px; }
+    .home, .about { padding: 80px 5% 40px; }
+    .btn-1, .btn-2 { padding: 10px 18px; font-size: 14px; }
+    .contact-form form { padding: 10px; }
+    footer .list { flex-direction: column; gap: 10px; }
+}
